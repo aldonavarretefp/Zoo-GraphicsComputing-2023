@@ -1,0 +1,21 @@
+# This file uses centimeters as units for non-parametric coordinates.
+
+mtllib agua.mtl
+g default
+v -5.068201 4.422488 8.284180
+v 4.794503 4.422488 8.284180
+v -5.068201 4.422488 -6.999145
+v 4.794503 4.422488 -6.999145
+vt -0.237481 -0.339873
+vt 1.234491 -0.339873
+vt -0.237481 1.341220
+vt 1.234491 1.341220
+vn 0.000000 1.000000 0.000000
+vn 0.000000 1.000000 0.000000
+vn 0.000000 1.000000 0.000000
+vn 0.000000 1.000000 0.000000
+s 1
+g polySurface85 pasted__polySurface148
+usemtl pasted__phong4SG
+f 1/1/1 2/2/2 3/3/3
+f 3/3/3 2/2/2 4/4/4

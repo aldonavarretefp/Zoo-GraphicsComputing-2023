@@ -1,0 +1,28 @@
+﻿  main.cpp
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(217,24): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(254,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(255,26): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(256,26): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(257,26): warning C4244: '=': conversión de 'double' a 'T'; posible pérdida de datos
+          with
+          [
+              T=float
+          ]
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(260,23): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(323,93): warning C4305: 'argumento': truncamiento de 'double' a 'GLfloat'
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(517,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(518,11): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(522,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(523,18): warning C4244: 'inicializando': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(525,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\ProyectoFinal\main.cpp(526,10): warning C4244: '=': conversión de 'double' a 'GLfloat'; posible pérdida de datos
+soil2-debug.lib(image_DXT.obj) : warning LNK4099: no se encontró PDB '' con 'soil2-debug.lib(image_DXT.obj)' o en ''; se vinculará el objeto sin tener en cuenta información de depuración
+  ProyectoFinal.vcxproj -> C:\Users\ribel\source\repos\420053710_PROYECTOFINAL2023-2_GPO11\Debug\ProyectoFinal.exe
