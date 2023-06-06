@@ -1,0 +1,342 @@
+newmtl Piso:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd grass.jpg
+Ni 1.00
+newmtl arbol:Branch0019SG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd BranchFlattened.tga
+Ni 1.00
+newmtl arbol:TrunkSG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd BarkPine001.jpg
+Ni 1.00
+newmtl banca:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Bench_BaseColor.png
+Ni 1.00
+newmtl camino1:Side_Walk_1_BlockSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd Side_Walk_Mat_1001_albedo.jpeg
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl camino1:meshId1_nameSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd Side_Walk_Curb_Mat_1001_albedo.jpeg
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 18.00
+newmtl contornoParedes:phong8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TexturaPiso.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks TechoSpecular.png
+Ns 18.00
+newmtl contornoParedes:phong15SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TexturaPiso.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl divisiones_ventanas:phong5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd divisiones-ventanas.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl edificio1:phong8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd TexturaPiso.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMapPiso.png
+Ns 18.00
+newmtl escalera:phong6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd metal_5818.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(6).png
+Ns 18.00
+newmtl escalera:phong7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Paint-1400.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(7).png
+Ns 18.00
+newmtl flores1:LinenFBXASC047wFlowerSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd Linen_Diffuse.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl flores1:LinenFBXASC047wFlowerSG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd Linen_Flower_Diffuse.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl gate:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Mistolegno_BaseColor.png
+Ni 1.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl japaneseFencePieces:MainFenceSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd MainFenceTEXTURE.png
+Ni 1.00
+Ks 0.03 0.01 0.00
+Ns 0.00
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd image.png
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd blancoTexture.jpg
+Ni 1.00
+newmtl letrero_entrada:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Sin_nombre.png
+Ni 1.00
+newmtl macetas:FlowerPotSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd FlowerPot_Albedo.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 98.00
+newmtl mesasAmbientacion:CHAIR_LOWSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaSilla.jpg
+Ni 1.00
+Ks 0.25 0.25 0.25
+Ns 7.61
+newmtl mesasAmbientacion:phong22SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaMesa.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl mesasAmbientacion:phong23SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaMetalSilla.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl modeloPared:phong6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd concretoPared.jpg
+bump  -bm 1 NormalMap.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap.png
+Ns 18.00
+newmtl muros:secondFloorWallSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd cafe.png
+Ni 1.00
+newmtl muros1:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Concrete-013.jpg
+Ni 1.00
+newmtl muros1:lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd white.jpg
+Ni 1.00
+newmtl muros1:secondFloorWallSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd cafe.png
+Ni 1.00
+newmtl paredes:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pared.jpg
+Ni 1.00
+newmtl paredes:lambert14SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd interior.jpg
+Ni 1.00
+newmtl pecera:phong17SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.25 0.25 0.25
+map_Kd texturaPeceraVidrio.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl pilares:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl pilares:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Concrete-013.jpg
+Ni 1.00
+newmtl poste:body_material
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd negroTexture.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 250.00
+newmtl poste:bulb_casing_material
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd blancoTexture.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 250.00
+newmtl sueloPlantaBaja:lambert8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd StoneFloor-5062.jpg
+Ni 1.00
+newmtl techo:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl techo:lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Concrete-013.jpg
+Ni 1.00
+newmtl techo:phong6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd metal_5818.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(6).png
+Ns 18.00
+newmtl texto:phong19SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd texturaTexto.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl turistas:Material_001
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd Mesh1166ripnoesismeshnode0000mesh1166rip1_diff.png
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00

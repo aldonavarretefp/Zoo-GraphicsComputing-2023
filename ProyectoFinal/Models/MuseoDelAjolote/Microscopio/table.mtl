@@ -1,0 +1,398 @@
+newmtl MicroscopeSG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd M_Black_Base_color.png
+bump  -bm 1 M_Black_Normal.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 98.00
+newmtl MicroscopeSG2
+illum 4
+Kd 0.80 0.80 0.80
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl MicroscopeSG3
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd M_White_Base_color.png
+bump  -bm 1 M_White_Normal.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 98.00
+newmtl MicroscopeSG4
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd M_Silver_Base_color.png
+bump  -bm 1 M_Silver_Normal.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 98.00
+newmtl _Freshwater_Aquarium_v1_l2__Freshwater_Aquarium_Glass1
+illum 4
+Kd 0.07 0.21 0.26
+Ka 0.07 0.21 0.26
+Tf 0.10 0.10 0.10
+Ni 1.50
+Ks 0.09 0.09 0.09
+Ns 10.00
+newmtl _Freshwater_Aquarium_v1_l2__Freshwater_Aquarium_Main1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 12986_Freshwater_Aquarium_Main.jpg
+map_Ka 12986_Freshwater_Aquarium_Main.jpg
+Ni 1.50
+Ks 0.00 0.00 0.00
+Ns 25.00
+newmtl _Freshwater_Aquarium_v1_l2__Freshwater_Aquarium_Props1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 12986_Freshwater_aquarium_Props1_diff.jpg
+map_Ka 12986_Freshwater_aquarium_Props1_diff.jpg
+Ni 1.50
+Ks 0.37 0.37 0.37
+Ns 30.00
+newmtl _Freshwater_Aquarium_v1_l2__Freshwater_Aquarium_Props2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 12986_Freshwater_aquarium_Props2_diff.jpg
+map_Ka 12986_Freshwater_aquarium_Props2_diff.jpg
+Ni 1.50
+Ks 0.44 0.44 0.44
+Ns 25.00
+newmtl _Freshwater_Aquarium_v1_l2__Freshwater_Aquarium_Props_Plastic
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.25 0.25 0.25
+map_Kd 12986_Freshwater_aquarium_Props1_diff.jpg
+map_Ka 12986_Freshwater_aquarium_Props1_diff.jpg
+Ni 1.50
+Ks 0.54 0.54 0.54
+Ns 30.00
+newmtl _Freshwater_Aquarium_v1_l2__Freshwater_Aquarium_Props_Rubber_01
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.50 0.50 0.50
+map_Kd 12986_Freshwater_aquarium_Props1_diff.jpg
+map_Ka 12986_Freshwater_aquarium_Props1_diff.jpg
+Ni 1.50
+Ks 0.37 0.37 0.37
+Ns 30.00
+newmtl _Freshwater_Aquarium_v1_l2__Freshwater_Aquarium_Props_Rubber_03
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.85 0.85 0.85
+map_Kd 12986_Freshwater_aquarium_Props1_diff.jpg
+map_Ka 12986_Freshwater_aquarium_Props1_diff.jpg
+Ni 1.50
+Ks 0.37 0.37 0.37
+Ns 30.00
+newmtl ajolote_initialShadingGroup
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa.png
+Ni 1.00
+newmtl ajolote_lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd negro.png
+Ni 1.00
+newmtl ajolote_lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa1.png
+Ni 1.00
+newmtl ajolote_lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd morado.png
+Ni 1.00
+newmtl extinguisher_initialShadingGroup1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd fire_extinguisher_co2_D.tga
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks fire_extinguisher_co2_S.tga
+Ns 18.00
+newmtl initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Sin_nombre.png
+Ni 1.00
+newmtl lambert4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Concrete-013.jpg
+Ni 1.00
+newmtl lambert5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rosa1.png
+Ni 1.00
+newmtl lambert8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd StoneFloor-5062.jpg
+Ni 1.00
+newmtl lambert10SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd white.jpg
+Ni 1.00
+newmtl lambert11SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd ajolote-verde.png
+Ni 1.00
+newmtl lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd geco-naranja.png
+Ni 1.00
+newmtl lambert13SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rana-amarilla.png
+Ni 1.00
+newmtl lambert14SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rana-azul.png
+Ni 1.00
+newmtl lambert16SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd geco-rosa.png
+Ni 1.00
+newmtl lambert17SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd ajolote-verde-claro.png
+Ni 1.00
+newmtl lambert18SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd bandera1.png
+Ni 1.00
+newmtl lambert19SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd bandera4.png
+Ni 1.00
+newmtl lambert20SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd bandera2.png
+Ni 1.00
+newmtl lambert21SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd bandera3.png
+Ni 1.00
+newmtl pasted__CavePlatform2_
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd CavePlatform2_Base_Diffuse-editado.png
+Ni 1.00
+newmtl pasted__lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd stone061.JPG
+Ni 1.00
+newmtl pasted__phong3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd ventana-alfa.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl pasted__phong3SG5
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pngjoy.com_ornamental-grass-tall-grass-texture-png-png-download_7954223.png
+Ni 1.00
+newmtl pasted__phong4SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.50 0.50 0.50
+map_Kd image.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(2).png
+Ns 18.00
+newmtl pasted__phong5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Lokvanj.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(3).png
+Ns 18.00
+newmtl phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rojo-metal.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(1).png
+Ns 18.00
+newmtl phong2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Wood-3355.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl phong3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd NicePng_metal-texture-png_2219858.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl phong5SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd divisiones-ventanas.png
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl phong6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd metal_5818.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(6).png
+Ns 18.00
+newmtl phong7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Paint-1400.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(7).png
+Ns 18.00
+newmtl phong8SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd metal-pulido.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(4).png
+Ns 18.00
+newmtl phong9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd piso.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(5).png
+Ns 18.00
+newmtl secondFloorWallSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd cafe.png
+Ni 1.00
+newmtl wire_008061138
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.03 0.24 0.54
+Tf 1.00 1.00 1.00
+map_Kd wood.jpg
+Ni 1.00
+Ks 0.35 0.35 0.35
+Ns 32.00
