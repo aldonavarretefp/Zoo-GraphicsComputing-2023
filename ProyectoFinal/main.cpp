@@ -539,12 +539,6 @@ int main() {
         Model AnfibiosPasto((char*)"Models/MuseoDelAjolote/Habitat/pasto.obj");
         Model AnfibiosHojasFlotantes((char*)"Models/MuseoDelAjolote/Habitat/hojasFlotantes.obj");
         Model AnfibiosAjolotesEstaticos((char*)"Models/MuseoDelAjolote/Ajolote/ajolotesEstaticos.obj");
-        Model AnfibiosPeceras1((char*)"Models/MuseoDelAjolote/Peceras/pecera-1.obj");
-        Model AnfibiosPeceras2((char*)"Models/MuseoDelAjolote/Peceras/pecera-2.obj");
-        Model AnfibiosPeceras3((char*)"Models/MuseoDelAjolote/Peceras/pecera-3.obj");
-        Model AnfibiosCristalesPecera1((char*)"Models/MuseoDelAjolote/Peceras/cristal-pecera-1.obj");
-        Model AnfibiosCristalesPecera2((char*)"Models/MuseoDelAjolote/Peceras/cristal-pecera-2.obj");
-        Model AnfibiosCristalesPecera3((char*)"Models/MuseoDelAjolote/Peceras/cristal-pecera-3.obj");
         Model AnfibiosAdornoCentral((char*)"Models/MuseoDelAjolote/Adorno-central/adorno-central.obj");
         Model AnfibiosSinks((char*)"Models/MuseoDelAjolote/Sinks/sinks.obj");
         Model AnfibiosMesa((char*)"Models/MuseoDelAjolote/Microscopio/table.obj");
@@ -1216,10 +1210,12 @@ int main() {
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glUniform1i(glGetUniformLocation(lightingShader.Program, "enableTransparency"), 0);
         AnfibiosVigas.Draw(lightingShader);
+        
         model = glm::translate(model,glm::vec3(33.79, 5.4, -4.65));
         model = glm::rotate(model, (float)glm::radians(rotDoor), glm::vec3(0, 1, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AnfibiosPuerta.Draw(lightingShader);
+        
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
         model = glm::translate(model,glm::vec3(8.441,0,-16.343));
@@ -1234,27 +1230,8 @@ int main() {
         AnfibiosMuros.Draw(lightingShader);
         AnfibiosCuerpoHabitat.Draw(lightingShader);
         AnfibiosAjolotesEstaticos.Draw(lightingShader);
-        //AnfibiosPeceras1.Draw(lightingShader);
-        //AnfibiosPeceras2.Draw(lightingShader);
-        //AnfibiosPeceras3.Draw(lightingShader);
-        //AnfibiosMesa.Draw(lightingShader);
         AnfibiosSinks.Draw(lightingShader);
-        //microscopio
-        model = glm::mat4(1);
-        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
-        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
-        //AnfibiosCuerpoMicro.Draw(lightingShader);
-        model = glm::translate(model, glm::vec3(-26.6675, 18.0446, 16.2029));
-        model = glm::rotate(model, glm::radians(rotMicro), glm::vec3(1, 0, 0));
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-        //AnfibiosRuedaDerechaMicro.Draw(lightingShader);
-        model = glm::mat4(1);
-        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
-        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
-        model = glm::translate(model, glm::vec3(-27.1820, 18.0446, 16.2029));
-        model = glm::rotate(model, glm::radians(-rotMicro), glm::vec3(1, 0, 0));
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-        //AnfibiosRuedaIzqueirdaMicro.Draw(lightingShader);
+        
         //Modelado jer·rquico ajolote
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
@@ -1263,31 +1240,37 @@ int main() {
         model = glm::rotate(model, glm::radians(angCir), glm::vec3(0, 1, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AnfibiosCuerpoAjoloteAnim.Draw(lightingShader);
+        
         glm::mat4 modelTmp = model;
         model = glm::translate(model, glm::vec3(-0.1252, -0.08, 0.0351));
         model = glm::rotate(model, glm::radians(rotLeg), glm::vec3(0, 1, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AnfibiosDelanteraDerechaAnim.Draw(lightingShader);
+        
         model = modelTmp;
         model = glm::translate(model, glm::vec3(-0.124, -0.0976, -0.2251));
         model = glm::rotate(model, glm::radians(-rotLeg), glm::vec3(0, 1, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AnfibiosTraceraDerechaAnim.Draw(lightingShader);
+        
         model = modelTmp;
         model = glm::translate(model, glm::vec3(0.1131, -0.0752, 0.038));
         model = glm::rotate(model, glm::radians(rotLeg), glm::vec3(0, 1, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AnfibiosDelanteraIzquierdaAnim.Draw(lightingShader);
+        
         model = modelTmp;
         model = glm::translate(model, glm::vec3(0.1019, -0.0733, -0.2158));
         model = glm::rotate(model, glm::radians(-rotLeg), glm::vec3(0, 1, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AnfibiosTraceraIzquierdaAnim.Draw(lightingShader);
+        
         model = modelTmp;
         model = glm::translate(model, glm::vec3(0.0027, -0.0162, -0.3856));
         model = glm::rotate(model, glm::radians(rotTail), glm::vec3(0, 1, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AnfibiosColaAnim.Draw(lightingShader);
+        
         //tragaluz
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
@@ -1296,111 +1279,96 @@ int main() {
         model = glm::translate(model, glm::vec3(movXTraga, 0, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AnfibiosMarcoTragaluz.Draw(lightingShader);
+        
         glm::mat4 tmpTragaluz = model;
         glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 0.0, 0.0, 0.0, 0.8);
-        glEnable(GL_BLEND);//Avtiva la funcionalidad para trabajar el canal alfa
+        glEnable(GL_BLEND);//Activa la funcionalidad para trabajar el canal alfa
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         model = tmpTragaluz;
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AnfibiosCristalTragaluz.Draw(lightingShader);
+        
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
         model = glm::translate(model,glm::vec3(8.441,0,-16.343));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
         model = glm::translate(model,glm::vec3(8.441,0,-16.343));
         AnfibiosVentanas.Draw(lightingShader);
         AnfibiosVentanasHabitat.Draw(lightingShader);
-        //AnfibiosCristalesPecera1.Draw(lightingShader);
-        //AnfibiosCristalesPecera2.Draw(lightingShader);
-        //AnfibiosCristalesPecera3.Draw(lightingShader);
+        
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 2.0);
         AnfibiosAgua.Draw(lightingShader);
         glDisable(GL_BLEND);  //Desactiva el canal alfa
+        
         glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
-        glUniform1i(glGetUniformLocation(lightingShader.Program, "enableTransparency"), 1);
+        glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 1);
         AnfibiosbarandalesCentro.Draw(lightingShader);
         AnfibiosLetreroEntrada.Draw(lightingShader);
         AnfibiosPasto.Draw(lightingShader);
         AnfibiosHojasFlotantes.Draw(lightingShader);
         AnfibiosAdornoCentral.Draw(lightingShader);
-        glUniform1i(glGetUniformLocation(lightingShader.Program, "enableTransparency"), 0);
+        glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
         glBindVertexArray(0);
         
-        //AnimaciÛn de banderas
-        //AnimShader.Use();
-        //timeFlags = glfwGetTime() * speed;
-//        modelLoc = glGetUniformLocation(AnimShader.Program, "model");
-//        viewLoc = glGetUniformLocation(AnimShader.Program, "view");
-//        projLoc = glGetUniformLocation(AnimShader.Program, "projection");
+        //Banderas
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
+        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
+        model = glm::translate(model, glm::vec3(-38.2, 18.61, 34));
+        model = glm::rotate(model, (float)glm::radians(90.0), glm::vec3(0, 1, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AnfibiosBandera1.Draw(lightingShader);
         
-        // Set matrices
-//        glUniformMatrix4fv(viewLoc, 1, GL_FALSE, glm::value_ptr(view));
-//        glUniformMatrix4fv(projLoc, 1, GL_FALSE, glm::value_ptr(projection));
-//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "time"), timeFlags);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "offset"), randomOffset[0]);
-//        model = glm::mat4(1);
-//        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
-//        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
-//        model = glm::translate(model, glm::vec3(-38.2, 18.61, 34));
-//        model = glm::rotate(model, (float)glm::radians(90.0), glm::vec3(0, 1, 0));
-//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-//        AnfibiosBandera1.Draw(AnimShader);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "time"), timeFlags);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "offset"), randomOffset[1]);
-//        model = glm::mat4(1);
-//        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
-//        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
-//        model = glm::translate(model, glm::vec3(-14.5, 18.61, 34));
-//        model = glm::rotate(model, (float)glm::radians(90.0), glm::vec3(0, 1, 0));
-//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-//        AnfibiosBandera2.Draw(AnimShader);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "time"), timeFlags);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "offset"), randomOffset[2]);
-//        model = glm::mat4(1);
-//        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
-//        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
-//        model = glm::translate(model, glm::vec3(14.2, 18.61, 35));
-//        model = glm::rotate(model, (float)glm::radians(90.0), glm::vec3(0, 1, 0));
-//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-//        AnfibiosBandera3.Draw(AnimShader);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "time"), timeFlags);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "offset"), randomOffset[3]);
-//        model = glm::mat4(1);
-//        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
-//        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
-//        model = glm::translate(model, glm::vec3(40.6, 18.61, 32.7));
-//        model = glm::rotate(model, (float)glm::radians(-45.0), glm::vec3(0, 1, 0));
-//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-//        AnfibiosBandera4.Draw(AnimShader);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "time"), timeFlags);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "offset"), randomOffset[4]);
-//        model = glm::mat4(1);
-//        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
-//        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
-//        model = glm::translate(model, glm::vec3(42.06, 18.61, 10.49));
-//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-//        AnfibiosBandera5.Draw(AnimShader);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "time"), timeFlags);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "offset"), randomOffset[5]);
-//        model = glm::mat4(1);
-//        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
-//        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
-//        model = glm::translate(model, glm::vec3(42.06, 18.61, -10.03));
-//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-//        AnfibiosBandera6.Draw(AnimShader);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "time"), timeFlags);
-//        glUniform1f(glGetUniformLocation(AnimShader.Program, "offset"), randomOffset[6]);
-//        model = glm::mat4(1);
-//        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
-//        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
-//        model = glm::translate(model, glm::vec3(40.84, 18.61, -32.66));
-//        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-//        AnfibiosBandera7.Draw(AnimShader);
-//        glBindVertexArray(0);
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
+        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
+        model = glm::translate(model, glm::vec3(-14.5, 18.61, 34));
+        model = glm::rotate(model, (float)glm::radians(90.0), glm::vec3(0, 1, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AnfibiosBandera2.Draw(lightingShader);
+
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
+        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
+        model = glm::translate(model, glm::vec3(14.2, 18.61, 35));
+        model = glm::rotate(model, (float)glm::radians(90.0), glm::vec3(0, 1, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AnfibiosBandera3.Draw(lightingShader);
+
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
+        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
+        model = glm::translate(model, glm::vec3(40.6, 18.61, 32.7));
+        model = glm::rotate(model, (float)glm::radians(-45.0), glm::vec3(0, 1, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AnfibiosBandera4.Draw(lightingShader);
+        
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
+        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
+        model = glm::translate(model, glm::vec3(42.06, 18.61, 10.49));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AnfibiosBandera5.Draw(lightingShader);
+        
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
+        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
+        model = glm::translate(model, glm::vec3(42.06, 18.61, -10.03));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AnfibiosBandera6.Draw(lightingShader);
+        
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3,0.3,0.3));
+        model = glm::translate(model,glm::vec3(8.441,0,-16.343));
+        model = glm::translate(model, glm::vec3(40.84, 18.61, -32.66));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AnfibiosBandera7.Draw(lightingShader);
+
+        glBindVertexArray(0);
         
 /*---------------------------------------------------------------------------------------------------*/
         //Carga de modelos: Exterior
