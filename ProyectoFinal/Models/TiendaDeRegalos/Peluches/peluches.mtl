@@ -1,0 +1,63 @@
+newmtl peluches:FBXASC0481foxFinalSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 01foxtexture.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 0.00
+newmtl peluches:FBXASC0484bizonFinalSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 04bizontexture.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 0.00
+newmtl peluches:FBXASC0485deerFinalSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 05deertexture.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 0.00
+newmtl peluches:FBXASC0498girafFinalSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 18giraftexture.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 0.00
+newmtl peluches:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd T_SmallCrate_BC.png
+Ni 1.00
+Ks 0.01 0.01 0.01
+Ns 49.71
+newmtl peluches:pandaSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd ccb5a3.png
+Ni 1.00
+Ks 0.20 0.18 0.16
+Ns 6.73
+newmtl peluches:pandaSG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd negroTexture.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 5.69

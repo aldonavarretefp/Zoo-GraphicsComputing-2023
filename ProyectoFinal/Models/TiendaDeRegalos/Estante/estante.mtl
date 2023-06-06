@@ -1,0 +1,398 @@
+newmtl animalesSiluetas:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd color_blanco.jpg
+Ni 1.00
+newmtl cajaRegistradora:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd cashregister.png
+Ni 1.00
+newmtl casa:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pared.jpg
+Ni 1.00
+newmtl casa:lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 5F0909.png
+Ni 1.00
+newmtl casa:phong2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pisoTexture.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks pisoSpecularMap.png
+Ns 18.00
+newmtl dinero:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd cashregister.png
+Ni 1.00
+newmtl dinero:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd money.jpg
+Ni 1.00
+newmtl escritorio:COUNTER_RECEPCIONSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd blancoTexture.jpg
+Ni 1.00
+Ks 0.24 0.24 0.24
+Ns 62.00
+newmtl escritorio:MONITOR01SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 25854.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 23.32
+newmtl escritorio:MONITOR01SG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd negroTexture.jpg
+Ni 1.00
+Ks 0.18 0.18 0.18
+Ns 360.04
+newmtl estante:Black
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd negroTexture.jpg
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00
+newmtl estante:Blue
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd blue.jpg
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00
+newmtl estante:Brown
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd brown.jpg
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00
+newmtl estante:CoatRack3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd negroTexture.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl estante:CubeFBXASC046030SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rojoTexture.png
+Ni 1.00
+Ks 0.25 0.25 0.25
+Ns 7.61
+newmtl estante:CubeFBXASC046031SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rojo2.png
+Ni 1.00
+Ks 0.25 0.25 0.25
+Ns 7.61
+newmtl estante:CubeFBXASC046032SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd barcelona-zoo.jpg
+Ni 1.00
+Ks 0.25 0.25 0.25
+Ns 7.61
+newmtl estante:CylinderFBXASC046003SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd negroTexture.jpg
+Ni 1.00
+Ks 0.25 0.25 0.25
+Ns 7.61
+newmtl estante:CylinderSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd bluedemon.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 7.61
+newmtl estante:IcosphereFBXASC046004SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd gris1.png
+Ni 1.00
+Ks 0.25 0.25 0.25
+Ns 7.61
+newmtl estante:Orange
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd naranja.png
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00
+newmtl estante:Pink
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd pink.png
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00
+newmtl estante:Pink2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd pink2.png
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00
+newmtl estante:White
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd blancoTexture.jpg
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00
+newmtl estante:Yellow
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd amarillo.png
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00
+newmtl estante:lambert1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd blancoTexture.jpg
+Ni 1.00
+newmtl lambert9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pavimento.jpg
+Ni 1.00
+newmtl lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd interior.jpg
+Ni 1.00
+newmtl lambert14SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd interior.jpg
+Ni 1.00
+newmtl lambert15SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd baked_mesh_tex0.jpeg
+Ni 1.00
+newmtl lambert16SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd rojoTexture.png
+Ni 1.00
+newmtl lampara:gFBXASC032Ceiling_Fan_LP06SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DefaultMaterial_albedo.jpeg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl lampara:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Diffuse.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks Emission.png
+Ns 18.00
+newmtl macetas:FlowerPotSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd FlowerPot_Albedo.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 98.00
+newmtl macetas:LinenFBXASC047wFlowerSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd Linen_Diffuse.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl macetas:LinenFBXASC047wFlowerSG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd Linen_Flower_Diffuse.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl peluches:FBXASC0481foxFinalSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 01foxtexture.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 0.00
+newmtl peluches:FBXASC0484bizonFinalSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 04bizontexture.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 0.00
+newmtl peluches:FBXASC0485deerFinalSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 05deertexture.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 0.00
+newmtl peluches:FBXASC0498girafFinalSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 18giraftexture.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 0.00
+newmtl peluches:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd T_SmallCrate_BC.png
+Ni 1.00
+Ks 0.01 0.01 0.01
+Ns 49.71
+newmtl peluches:pandaSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd ccb5a3.png
+Ni 1.00
+Ks 0.20 0.18 0.16
+Ns 6.73
+newmtl peluches:pandaSG2
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd negroTexture.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 5.69
+newmtl turistas:Material_001
+illum 4
+Kd 0.00 0.00 0.00
+Ka 1.00 1.00 1.00
+Tf 1.00 1.00 1.00
+map_Kd Mesh1166ripnoesismeshnode0000mesh1166rip1_diff.png
+Ni 1.45
+Ks 0.50 0.50 0.50
+Ns 225.00
+newmtl turistas:Mesh_0078FBXASC046rip_noesis_meshnode_0000SG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd camp0_tex00.png
+Ni 1.00
+newmtl turistas:Mesh_0209FBXASC046rip_noesis_meshnode_0000SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.20 0.20 0.20
+Tf 1.00 1.00 1.00
+map_Kd fe0_tex00.png
+Ni 1.00
+newmtl ventanas3:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd blancoTexture.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap.png
+Ns 18.00

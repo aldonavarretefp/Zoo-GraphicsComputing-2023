@@ -1,0 +1,97 @@
+newmtl animalesSiluetas:lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd color_blanco.jpg
+Ni 1.00
+newmtl casa:lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pared.jpg
+Ni 1.00
+newmtl casa:lambert7SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd 5F0909.png
+Ni 1.00
+newmtl casa:phong2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pisoTexture.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks pisoSpecularMap.png
+Ns 18.00
+newmtl casa:phong3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.10 0.10 0.10
+map_Kd e8f0fa.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap.png
+Ns 18.00
+newmtl lambert9SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd pavimento.jpg
+Ni 1.00
+newmtl lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd interior.jpg
+Ni 1.00
+newmtl lambert14SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd interior.jpg
+Ni 1.00
+newmtl lampara:gFBXASC032Ceiling_Fan_LP06SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd DefaultMaterial_albedo.jpeg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl lampara:phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Diffuse.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks Emission.png
+Ns 18.00
+newmtl pot:FlowerPotSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd FlowerPot_Albedo.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 98.00
+newmtl pot:lambert12SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd ll5.jpg
+Ni 1.00
