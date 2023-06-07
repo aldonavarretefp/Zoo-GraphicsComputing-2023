@@ -1,0 +1,50 @@
+newmtl barnSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd barn_BaseColor.png
+Ni 1.00
+Ks 0.20 0.20 0.20
+Ns 23.00
+newmtl lambert2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd grass_9508.jpg
+Ni 1.00
+newmtl lambert3SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd image.png
+Ni 1.00
+Ks 0.00 0.00 0.00
+map_Ks SpecularMap_(2).png
+Ns 18.00
+newmtl pasted__elephant_ElephantSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd Elephant_Base.png
+Ni 1.00
+newmtl wall_EndSG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+map_Kd dikenlitel.tga
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 0.00
+newmtl wall_EndSG1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.59 0.59 0.59
+Tf 1.00 1.00 1.00
+Ni 1.00
+Ks 0.99 0.99 0.99
+Ns 7.85

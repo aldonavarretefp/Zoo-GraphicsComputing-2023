@@ -47,6 +47,12 @@ GLfloat lastY = HEIGHT / 2.0;
 bool keys[1024];
 bool firstMouse = true;
 
+//Variables elefantes
+array<float, 12> trompaRot = {0};
+bool animacionElefante = false;
+int parteTrompa = 0;
+
+
 //Variables Anfibios
 //AnimaciÛn bandera
 float timeFlags = 0;
@@ -304,6 +310,10 @@ float bRotRodDer[9] = { 0,15,-15,15,-15,0,0,0,0 };
 float bRotBrazoDer[9] = { 0,15, 25, 15, 10, 10, 0, 0 , 0 };
 float bRotBrazoIzq[9] = { 0,15, 25, 15, 10, 10, 0, 0 , 0 };
 
+
+
+
+
 FRAME KeyFrame[MAX_FRAMES];
 int FrameIndex = 9;
 bool play = false;
@@ -481,6 +491,7 @@ int main() {
     Shader lampShader("Shaders/lamp.vs", "Shaders/lamp.frag");
     Shader AnimShader("Shaders/anim.vs", "Shaders/anim.frag");
     Shader SkyBoxshader("Shaders/SkyBox.vs", "Shaders/SkyBox.frag");
+    
     //Exterior
     Model Banca((char*)"Models/Exterior/Banca/banca.obj");
     Model Camino((char*)"Models/Exterior/Camino/camino.obj");
@@ -602,9 +613,6 @@ int main() {
     Model AnfibiosColaAnim((char*)"Models/MuseoDelAjolote/Ajolote/colaDinamico.obj");
     Model AnfibiosCristalTragaluz((char*)"Models/MuseoDelAjolote/Edificio/cristal-tragaluz.obj");
     Model AnfibiosMarcoTragaluz((char*)"Models/MuseoDelAjolote/Edificio/marco-tragaluz.obj");
-    Model AnfibiosCuerpoMicro((char*)"Models/MuseoDelAjolote/Microscopio/cuerpo-micro.obj");
-    Model AnfibiosRuedaIzqueirdaMicro((char*)"Models/MuseoDelAjolote/Microscopio/rueda-izquierda.obj");
-    Model AnfibiosRuedaDerechaMicro((char*)"Models/MuseoDelAjolote/Microscopio/rueda-derecha.obj");
 
     // Leones
     Model PisoLeones((char*)"Models/Leones/PisoLeones/pisoLeones.obj");
@@ -619,7 +627,25 @@ int main() {
     Model TraDerLeon((char*)"Models/Leones/TraDerLeon/traDerLeon.obj");
     Model DelIzqLeon((char*)"Models/Leones/DelIzqLeon/delIzqLeon.obj");
     Model DelDerLeon((char*)"Models/Leones/DelDerLeon/delDerLeon.obj");
+  
 
+    //elefantes
+    Model HabitatElefantes((char*)"Models/Elefante/habitat-elefante.obj");
+    Model Fence((char*)"Models/Elefante/fence.obj");
+    Model Elefante((char*)"Models/Elefante/elefante.obj");
+    Model Trompa1((char*)"Models/Elefante/trompa1.obj");
+    Model Trompa2((char*)"Models/Elefante/trompa2.obj");
+    Model Trompa3((char*)"Models/Elefante/trompa3.obj");
+    Model Trompa4((char*)"Models/Elefante/trompa4.obj");
+    Model Trompa5((char*)"Models/Elefante/trompa5.obj");
+    Model Trompa6((char*)"Models/Elefante/trompa6.obj");
+    Model Trompa7((char*)"Models/Elefante/trompa7.obj");
+    Model Trompa8((char*)"Models/Elefante/trompa8.obj");
+    Model Trompa9((char*)"Models/Elefante/trompa9.obj");
+    Model Trompa10((char*)"Models/Elefante/trompa10.obj");
+    Model Trompa11((char*)"Models/Elefante/trompa11.obj");
+    Model Trompa12((char*)"Models/Elefante/trompa12.obj");
+    Model AguaTrompa((char*)"Models/Elefante/agua.obj");
     //Inicializacion de KeyFrames
     for (int i = 0; i < MAX_FRAMES; i++) {
         KeyFrame[i].posX = aPosX[i];
@@ -850,7 +876,7 @@ int main() {
         /*---------------------------------------------------------------------------------------------------*/
 
         /*---------------------------------------------------------------------------------------------------*/
-                //Carga de modelos: Tienda de regalos
+        //Carga de modelos: Tienda de regalos
         view = camera.GetViewMatrix();
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
@@ -860,6 +886,7 @@ int main() {
 
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+        
         Columnas.Draw(lightingShader);
         ParedesInteriores.Draw(lightingShader);
         Letras.Draw(lightingShader);
@@ -877,8 +904,8 @@ int main() {
         Peluches.Draw(lightingShader);
         Macetas.Draw(lightingShader);
         CajaRegistradora.Draw(lightingShader);
-
-        //Carrito
+       
+        
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
         model = glm::translate(model, glm::vec3(92.688, 0, 48.127));
@@ -1552,10 +1579,94 @@ int main() {
         ArbustosLeones.Draw(lightingShader);
         glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
 
-        glBindVertexArray(0);
+       
+
+        /*----------------------------------------------------------------------------------------------*/
+        //Elefantes
+        model = glm::mat4(1);
+       
+        model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
+        model = glm::translate(model, glm::vec3(-86.83, 0, 43.758));
+        model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0, 1, 0));
+        glm::mat4 tempModel = model;
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        HabitatElefantes.Draw(lightingShader);
+        Elefante.Draw(lightingShader);
+        model = glm::translate(model, glm::vec3(-19.8778, 8.6485, 14.3272));
+        model = glm::rotate(model, glm::radians(-trompaRot[0]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa1.Draw(lightingShader);
+     
+        model = glm::translate(model, glm::vec3(-0.0912, -1.2701, 0.1117));
+        model = glm::rotate(model, glm::radians(-trompaRot[1]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa2.Draw(lightingShader);
+
+        model = glm::translate(model, glm::vec3(0.0224, -1.1518, 0.0116));
+        model = glm::rotate(model, glm::radians(-trompaRot[2]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa3.Draw(lightingShader);
+
+        model = glm::translate(model, glm::vec3(0.0547,-0.9527,-0.0731));
+        model = glm::rotate(model, glm::radians(-trompaRot[3]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa4.Draw(lightingShader);
+
+        model = glm::translate(model, glm::vec3(0.0645, -0.8041, 0.0738));
+        model = glm::rotate(model, glm::radians(-trompaRot[4]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa5.Draw(lightingShader);
+ 
+        model = glm::translate(model, glm::vec3(0.0365, -0.6839, 0.007));
+        model = glm::rotate(model, glm::radians(-trompaRot[5]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa6.Draw(lightingShader);
+
+        model = glm::translate(model, glm::vec3(-0.0384, -0.6467, 0.0912));
+        model = glm::rotate(model, glm::radians(-trompaRot[6]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa7.Draw(lightingShader);
+ 
+        model = glm::translate(model, glm::vec3(0.1423, -0.5732, -0.0129));
+        model = glm::rotate(model, glm::radians(-trompaRot[7]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa8.Draw(lightingShader);
+
+        model = glm::translate(model, glm::vec3(-0.0081, -0.5416, 0.0491));
+        model = glm::rotate(model, glm::radians(-trompaRot[8]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa9.Draw(lightingShader);
+
+        model = glm::translate(model, glm::vec3(0.1198, -0.4575, 0.0603));
+        model = glm::rotate(model, glm::radians(-trompaRot[9]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa10.Draw(lightingShader);
+
+        model = glm::translate(model, glm::vec3(-0.0509, -0.3252, 0.0099));
+        model = glm::rotate(model, glm::radians(-trompaRot[10]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa11.Draw(lightingShader);
+
+        model = glm::translate(model, glm::vec3(0.0256, -0.3408, 0.03));
+        model = glm::rotate(model, glm::radians(-trompaRot[11]), glm::vec3(1, 0, 0));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        Trompa12.Draw(lightingShader);
+        model = glm::translate(model, glm::vec3(-0.0676, -1.2498, 0.2811));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AguaTrompa.Draw(lightingShader);
+        model = tempModel;
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        glUniform4f(glGetUniformLocation(lightingShader.Program, "colorAlpha"), 1.0, 1.0, 1.0, 1.0);
+        glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 1);
+        Fence.Draw(lightingShader);
+        glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
+
+
+        
 
         /*---------------------------------------------------------------------------------------------------*/
-                //Carga de modelos: Exterior
+        
+        //Carga de modelos: Exterior
         view = camera.GetViewMatrix();
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
@@ -1602,9 +1713,9 @@ int main() {
             Arbol.Draw(lightingShader);
         }
         glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
-
+     
         glBindVertexArray(0);
-
+        
         // Also draw the lamp object, again binding the appropriate shader
         lampShader.Use();
         // Get location objects for the matrices on the lamp shader (these could be different on a different shader)
@@ -1796,6 +1907,208 @@ inline void animateBubbles() {
     }
 }
 
+inline void animElef() {
+    if (animacionElefante) {
+        switch (parteTrompa) {
+        case 0:
+            if (trompaRot[0] < 20) {
+                trompaRot[0] += 0.5;
+            }
+            else {
+                parteTrompa = 1;
+            }
+            break;
+        case 1:
+            if (trompaRot[1] < 20) {
+                trompaRot[1] += 0.5;
+            }
+            else {
+                parteTrompa = 2;
+            }
+            break;
+        case 2:
+            if (trompaRot[2] < 20) {
+                trompaRot[2] += 0.5;
+            }
+            else {
+                parteTrompa = 3;
+            }
+            break;
+        case 3:
+            if (trompaRot[3] < 20) {
+                trompaRot[3] += 0.5;
+            }
+            else {
+                parteTrompa = 4;
+            }
+            break;
+        case 4:
+            if (trompaRot[4] < 20) {
+                trompaRot[4] += 0.5;
+            }
+            else {
+                parteTrompa = 5;
+            }
+            break;
+        case 5:
+            if (trompaRot[5] < 20) {
+                trompaRot[5] += 0.5;
+            }
+            else {
+                parteTrompa = 6;
+            }
+            break;
+        case 6:
+            if (trompaRot[6] < 20) {
+                trompaRot[6] += 0.5;
+            }
+            else {
+                parteTrompa = 7;
+            }
+            break;
+        case 7:
+            if (trompaRot[7] < 20) {
+                trompaRot[7] += 0.5;
+            }
+            else {
+                parteTrompa = 8;
+            }
+            break;
+        case 8:
+            if (trompaRot[8] < 20) {
+                trompaRot[8] += 0.5;
+            }
+            else {
+                parteTrompa = 9;
+            }
+            break;
+        case 9:
+            if (trompaRot[9] < 20) {
+                trompaRot[9] += 0.5;
+            }
+            else {
+                parteTrompa = 10;
+            }
+            break;
+        case 10:
+            if (trompaRot[10] < 20) {
+                trompaRot[10] += 0.5;
+            }
+            else {
+                parteTrompa = 11;
+            }
+            break;
+        case 11:
+            if (trompaRot[11] < 20) {
+                trompaRot[11] += 0.5;
+            }
+            else {
+                parteTrompa = 12;
+            }
+            break;
+        case 12:
+            if (trompaRot[0] > 0) {
+                trompaRot[0] -= 0.5;
+            }
+            else {
+                parteTrompa = 13;
+            }
+            break;
+        case 13:
+            if (trompaRot[1] > 0) {
+                trompaRot[1] -= 0.5;
+            }
+            else {
+                parteTrompa = 14;
+            }
+            break;
+        case 14:
+            if (trompaRot[2] > 0) {
+                trompaRot[2] -= 0.5;
+            }
+            else {
+                parteTrompa = 15;
+            }
+            break;
+        case 15:
+            if (trompaRot[3] > 0) {
+                trompaRot[3] -= 0.5;
+            }
+            else {
+                parteTrompa = 16;
+            }
+            break;
+        case 16:
+            if (trompaRot[4] > 0) {
+                trompaRot[4] -= 0.5;
+            }
+            else {
+                parteTrompa = 17;
+            }
+            break;
+        case 17:
+            if (trompaRot[5] > 0) {
+                trompaRot[5] -= 0.5;
+            }
+            else {
+                parteTrompa = 18;
+            }
+            break;
+        case 18:
+            if (trompaRot[6] > 0) {
+                trompaRot[6] -= 0.5;
+            }
+            else {
+                parteTrompa = 19;
+            }
+            break;
+        case 19:
+            if (trompaRot[7] > 0) {
+                trompaRot[7] -= 0.5;
+            }
+            else {
+                parteTrompa = 20;
+            }
+            break;
+        case 20:
+            if (trompaRot[8] > 0) {
+                trompaRot[8] -= 0.5;
+            }
+            else {
+                parteTrompa = 21;
+            }
+            break;
+        case 21:
+            if (trompaRot[9] > 0) {
+                trompaRot[9] -= 0.5;
+            }
+            else {
+                parteTrompa = 22;
+            }
+            break;
+        case 22:
+            if (trompaRot[10] > 0) {
+                trompaRot[10] -= 0.5;
+            }
+            else {
+                parteTrompa = 23;
+            }
+            break;
+        case 23:
+            if (trompaRot[11] > 0) {
+                trompaRot[11] -= 0.5;
+            }
+            else {
+                trompaRot = { 0 };
+                parteTrompa = 0;
+                animacionElefante = false;
+            }
+            break;
+        }
+
+    }
+}
+
 
 
 void animacion() {
@@ -1855,6 +2168,8 @@ void DoMovement() {
         camera.ProcessKeyboard(RIGHT, deltaTime);
     }
 
+    animElef();
+
     if (keys[GLFW_KEY_B]) {
         animateBubbles();
     }
@@ -1874,6 +2189,8 @@ void DoMovement() {
     if (keys[GLFW_KEY_X]) {
         animateSillas();
     }
+
+
 
     if (cajaAbierta) {
         if (aperturaCajaZ < 2.299) {
@@ -2107,6 +2424,10 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
 
     if (keys[GLFW_KEY_L]) {
         animacionAjolote = !animacionAjolote;
+    }
+
+    if (keys[GLFW_KEY_E]) {
+        animacionElefante = !animacionElefante;
     }
 
     if (keys[GLFW_KEY_T]) {
