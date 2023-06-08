@@ -51,7 +51,7 @@ bool firstMouse = true;
 array<float, 12> trompaRot = { 0 };
 bool animacionElefante = false;
 int parteTrompa = 0;
-
+constexpr float VELO_TROMPA = 100;
 
 //Variables Anfibios
 //AnimaciÛn bandera
@@ -271,7 +271,7 @@ float posX = PosIni.x, posY = PosIni.y, posZ = PosIni.z, rotRodIzq = 0, rotRodDe
 float leonposX = PosIni.x, leonposY = PosIni.y, leonposZ = PosIni.z, leonrotRodIzq = 0, leonrotRodDer = 0, leonrotBrazoIzq = 0, leonrotBrazoDer = 0;
 
 #define MAX_FRAMES 9
-int i_max_steps = 50;
+int i_max_steps = 20;
 int i_curr_steps = 0;
 typedef struct _frame {
     //Variables para GUARDAR Key Frames
@@ -1812,10 +1812,10 @@ inline void animateSillas() {
     }
 
     if (!changeDirectionSillas) {
-        posSillas += 0.001;
+        posSillas += 0.1 * deltaTime;
     }
     else {
-        posSillas -= 0.001;
+        posSillas -= 0.1 * deltaTime;
     }
 }
 
@@ -1823,15 +1823,15 @@ void animateJarron() {
     //Movimiento del coche
     if (iniciaJarron) {
         if (recorrido1) {
-            movKitX += 0.001f;
-            rotKitZ += 0.1f;
+            movKitX += 0.02f * deltaTime;
+            rotKitZ += 2.0f * deltaTime;
             if (movKitX > 0.05f) {
                 recorrido1 = false;
                 recorrido2 = true;
             }
         }
         if (recorrido2) {
-            movKitX += 0.0015f;
+            movKitX += 0.0015f * deltaTime;
             movKitY -= 4.0f * alphaVariation * pow(0.001, 2);
             alphaVariation += 4.5f;
             rotKitZ += 0.4f;
@@ -1841,7 +1841,7 @@ void animateJarron() {
             }
         }
         if (recorrido3) {
-            movKitZ -= 0.00015f;
+            movKitZ -= 0.00015;
             alphaVariation += 2.0f;
             rotKitX += 0.1f;
             if (movKitZ < -0.10f) {
@@ -1893,13 +1893,13 @@ inline void moveFins() {
     else if (rotAletas > 20) {
         changeDirectionsAletas = false;
     }
-    if (changeDirectionsAletas) rotAletas += 1.0f;
-    else rotAletas -= 1.0f;
+    if (changeDirectionsAletas) rotAletas += 20.0f * deltaTime;
+    else rotAletas -= 20.0f * deltaTime;
 }
 
 inline void animateFish() {
-    rotFish += 0.5;
-    rotFishLeft -= 0.5;
+    rotFish += 10 * deltaTime;
+    rotFishLeft -= 10 * deltaTime;
 }
 
 inline void animateDoors() {
@@ -1919,7 +1919,7 @@ inline void animateDoors() {
 }
 
 inline void animateChair() {
-    rotSilla += 1.0f;
+    rotSilla += 100.0f * deltaTime;
 }
 
 inline void animateBubbles() {
@@ -1939,7 +1939,7 @@ inline void animElef() {
         switch (parteTrompa) {
         case 0:
             if (trompaRot[0] < 20) {
-                trompaRot[0] += 0.5;
+                trompaRot[0] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 1;
@@ -1947,7 +1947,7 @@ inline void animElef() {
             break;
         case 1:
             if (trompaRot[1] < 20) {
-                trompaRot[1] += 0.5;
+                trompaRot[1] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 2;
@@ -1955,7 +1955,7 @@ inline void animElef() {
             break;
         case 2:
             if (trompaRot[2] < 20) {
-                trompaRot[2] += 0.5;
+                trompaRot[2] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 3;
@@ -1963,7 +1963,7 @@ inline void animElef() {
             break;
         case 3:
             if (trompaRot[3] < 20) {
-                trompaRot[3] += 0.5;
+                trompaRot[3] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 4;
@@ -1971,7 +1971,7 @@ inline void animElef() {
             break;
         case 4:
             if (trompaRot[4] < 20) {
-                trompaRot[4] += 0.5;
+                trompaRot[4] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 5;
@@ -1979,7 +1979,7 @@ inline void animElef() {
             break;
         case 5:
             if (trompaRot[5] < 20) {
-                trompaRot[5] += 0.5;
+                trompaRot[5] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 6;
@@ -1987,7 +1987,7 @@ inline void animElef() {
             break;
         case 6:
             if (trompaRot[6] < 20) {
-                trompaRot[6] += 0.5;
+                trompaRot[6] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 7;
@@ -1995,7 +1995,7 @@ inline void animElef() {
             break;
         case 7:
             if (trompaRot[7] < 20) {
-                trompaRot[7] += 0.5;
+                trompaRot[7] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 8;
@@ -2003,7 +2003,7 @@ inline void animElef() {
             break;
         case 8:
             if (trompaRot[8] < 20) {
-                trompaRot[8] += 0.5;
+                trompaRot[8] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 9;
@@ -2011,7 +2011,7 @@ inline void animElef() {
             break;
         case 9:
             if (trompaRot[9] < 20) {
-                trompaRot[9] += 0.5;
+                trompaRot[9] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 10;
@@ -2019,7 +2019,7 @@ inline void animElef() {
             break;
         case 10:
             if (trompaRot[10] < 20) {
-                trompaRot[10] += 0.5;
+                trompaRot[10] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 11;
@@ -2027,7 +2027,7 @@ inline void animElef() {
             break;
         case 11:
             if (trompaRot[11] < 20) {
-                trompaRot[11] += 0.5;
+                trompaRot[11] += VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 12;
@@ -2035,7 +2035,7 @@ inline void animElef() {
             break;
         case 12:
             if (trompaRot[0] > 0) {
-                trompaRot[0] -= 0.5;
+                trompaRot[0] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 13;
@@ -2043,7 +2043,7 @@ inline void animElef() {
             break;
         case 13:
             if (trompaRot[1] > 0) {
-                trompaRot[1] -= 0.5;
+                trompaRot[1] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 14;
@@ -2051,7 +2051,7 @@ inline void animElef() {
             break;
         case 14:
             if (trompaRot[2] > 0) {
-                trompaRot[2] -= 0.5;
+                trompaRot[2] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 15;
@@ -2059,7 +2059,7 @@ inline void animElef() {
             break;
         case 15:
             if (trompaRot[3] > 0) {
-                trompaRot[3] -= 0.5;
+                trompaRot[3] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 16;
@@ -2067,7 +2067,7 @@ inline void animElef() {
             break;
         case 16:
             if (trompaRot[4] > 0) {
-                trompaRot[4] -= 0.5;
+                trompaRot[4] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 17;
@@ -2075,7 +2075,7 @@ inline void animElef() {
             break;
         case 17:
             if (trompaRot[5] > 0) {
-                trompaRot[5] -= 0.5;
+                trompaRot[5] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 18;
@@ -2083,7 +2083,7 @@ inline void animElef() {
             break;
         case 18:
             if (trompaRot[6] > 0) {
-                trompaRot[6] -= 0.5;
+                trompaRot[6] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 19;
@@ -2091,7 +2091,7 @@ inline void animElef() {
             break;
         case 19:
             if (trompaRot[7] > 0) {
-                trompaRot[7] -= 0.5;
+                trompaRot[7] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 20;
@@ -2099,7 +2099,7 @@ inline void animElef() {
             break;
         case 20:
             if (trompaRot[8] > 0) {
-                trompaRot[8] -= 0.5;
+                trompaRot[8] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 21;
@@ -2107,7 +2107,7 @@ inline void animElef() {
             break;
         case 21:
             if (trompaRot[9] > 0) {
-                trompaRot[9] -= 0.5;
+                trompaRot[9] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 22;
@@ -2115,7 +2115,7 @@ inline void animElef() {
             break;
         case 22:
             if (trompaRot[10] > 0) {
-                trompaRot[10] -= 0.5;
+                trompaRot[10] -= VELO_TROMPA * deltaTime;
             }
             else {
                 parteTrompa = 23;
@@ -2123,7 +2123,7 @@ inline void animElef() {
             break;
         case 23:
             if (trompaRot[11] > 0) {
-                trompaRot[11] -= 0.5;
+                trompaRot[11] -= VELO_TROMPA * deltaTime;
             }
             else {
                 trompaRot = { 0 };
@@ -2209,12 +2209,12 @@ void DoMovement() {
 
     if (cajaAbierta) {
         if (aperturaCajaZ < 2.299) {
-            aperturaCajaZ += 0.01;
+            aperturaCajaZ = min(aperturaCajaZ + 0.5 * deltaTime, 2.299);
         }
     }
     else {
         if (aperturaCajaZ > 1.575) {
-            aperturaCajaZ -= 0.01;
+            aperturaCajaZ = max(aperturaCajaZ - 0.5 * deltaTime, 1.575);
         }
     }
 
