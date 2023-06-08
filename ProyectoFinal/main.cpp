@@ -594,8 +594,6 @@ int main() {
     Model AcuarioPezAletaIzquierda((char*)"Models/Acuario/pezAletaIzq/pezAletaIzq.obj");
     Model AcuarioPezAletaDerecha((char*)"Models/Acuario/pezAletaDer/pezAletaDer.obj");
 
-
-
     //Anfibios
     Model AnfibiosVigas((char*)"Models/MuseoDelAjolote/Edificio/vigas.obj");
     Model AnfibiosVentanas((char*)"Models/MuseoDelAjolote/Edificio/ventanas.obj");
@@ -1133,15 +1131,6 @@ int main() {
         model = glm::scale(model, glm::vec3(7.5, 7.5, 7.5));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AcuarioPeceraCuerpo.Draw(lightingShader);
-
-        /*model = glm::mat4(1);
-        model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
-        model = glm::translate(model, glm::vec3(91.512, 0, -75.644));
-        model = glm::scale(model, glm::vec3(7.5, 7.5, 7.5));
-        model = glm::translate(model, glm::vec3(-1.2f + r * cos(glm::radians(rotFish)), 0.487, -0.638 + r * sin(glm::radians(rotFish))));
-        model = glm::rotate(model, glm::radians(rotFishLeft), glm::vec3(0.0f, 1.0f, 0.0f));
-        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-        AcuarioPezNaranja.Draw(lightingShader);*/
 
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
@@ -1895,6 +1884,17 @@ void animacionA() {
             i_curr_steps++;
         }
     }
+}
+
+inline void moveFins() {
+    if (rotAletas < -20) {
+        changeDirectionsAletas = true;
+    }
+    else if (rotAletas > 20) {
+        changeDirectionsAletas = false;
+    }
+    if (changeDirectionsAletas) rotAletas += 1.0f;
+    else rotAletas -= 1.0f;
 }
 
 inline void animateFish() {
