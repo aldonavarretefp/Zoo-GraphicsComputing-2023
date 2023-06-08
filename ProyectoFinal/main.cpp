@@ -48,7 +48,7 @@ bool keys[1024];
 bool firstMouse = true;
 
 //Variables elefantes
-array<float, 12> trompaRot = {0};
+array<float, 12> trompaRot = { 0 };
 bool animacionElefante = false;
 int parteTrompa = 0;
 
@@ -107,7 +107,7 @@ float posDeltaBur1 = 0.0f, posDeltaBur2 = 0.0f;
 
 float alphaVariation = 10.0f;
 
-// Animaciones sencillas
+// Animaciones sencillas Acuario
 float   tiempo = 0,
 r = 0.2f,
 posSillas = 0,
@@ -115,11 +115,19 @@ posZPezNaranja = 0,
 posXPezNaranja = 0,
 rotFish = 0,
 rotFishLeft = 0,
-rotSilla = 0;
+rotSilla = 0,
+rotAletas = 0;
 
 bool    changeDirectionFish = false,
 openDoors = true,
-changeDirectionSillas = false;
+changeDirectionSillas = false,
+animFishRotating = false,
+changeDirectionsAletas = false,
+animChair = false,
+animChairs = false,
+animDoorsAcuario = false,
+animBubbles = false,
+animDoors = false;
 
 float rotPuertaDer = 0.0f, rotPuertaIzq = 0.0f;
 
@@ -311,6 +319,8 @@ float aRotRodDer[9] = { 0,15,-15,15,0,0,0,0,0 };
 float aRotBrazoDer[9] = { 0,-15,15,-15,0,50,90,90,0 };
 float aRotBrazoIzq[9] = { 0,15,-15,15,0,50,90,90,0 };
 
+float difX = 0.0f;
+
 float bPosX[9] = { 0,0,0,0,0,0,0,0,0 };
 float bPosY[9] = { 0, 1.8, 2.0, 2.0, 2.25, 2.25, 2.25, 2.25, 2.25 };
 float bPosZ[9] = { 0,1.888, 2.5,4.0,4.5,6.5,6.5,6.5, 6.5 };
@@ -497,7 +507,7 @@ int main() {
     Shader lampShader("Shaders/lamp.vs", "Shaders/lamp.frag");
     Shader AnimShader("Shaders/anim.vs", "Shaders/anim.frag");
     Shader SkyBoxshader("Shaders/SkyBox.vs", "Shaders/SkyBox.frag");
-    
+
     //Exterior
     Model Banca((char*)"Models/Exterior/Banca/banca.obj");
     Model Camino((char*)"Models/Exterior/Camino/camino.obj");
@@ -580,6 +590,11 @@ int main() {
     Model AcuarioSilla2Mov((char*)"Models/Acuario/Silla2Mov/silla2Mov.obj");
     Model AcuarioSilla3Mov((char*)"Models/Acuario/Silla3Mov/silla3Mov.obj");
     Model AcuarioTortuga((char*)"Models/Acuario/Tortuga/tortuga.obj");
+    Model AcuarioPezTorso((char*)"Models/Acuario/PezTorso/pezTorso.obj");
+    Model AcuarioPezAletaIzquierda((char*)"Models/Acuario/pezAletaIzq/pezAletaIzq.obj");
+    Model AcuarioPezAletaDerecha((char*)"Models/Acuario/pezAletaDer/pezAletaDer.obj");
+
+
 
     //Anfibios
     Model AnfibiosVigas((char*)"Models/MuseoDelAjolote/Edificio/vigas.obj");
@@ -879,7 +894,7 @@ int main() {
         
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
-        
+
         Columnas.Draw(lightingShader);
         ParedesInteriores.Draw(lightingShader);
         Letras.Draw(lightingShader);
@@ -1119,14 +1134,45 @@ int main() {
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         AcuarioPeceraCuerpo.Draw(lightingShader);
 
-        model = glm::mat4(1);
+        /*model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
         model = glm::translate(model, glm::vec3(91.512, 0, -75.644));
         model = glm::scale(model, glm::vec3(7.5, 7.5, 7.5));
         model = glm::translate(model, glm::vec3(-1.2f + r * cos(glm::radians(rotFish)), 0.487, -0.638 + r * sin(glm::radians(rotFish))));
         model = glm::rotate(model, glm::radians(rotFishLeft), glm::vec3(0.0f, 1.0f, 0.0f));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
-        AcuarioPezNaranja.Draw(lightingShader);
+        AcuarioPezNaranja.Draw(lightingShader);*/
+
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
+        model = glm::translate(model, glm::vec3(91.512, 0, -75.644));
+        model = glm::scale(model, glm::vec3(7.5, 7.5, 7.5));
+        model = glm::translate(model, glm::vec3(-1.2f + (r + 0.01) * cos(glm::radians(rotFish)), 0.487, -0.638 + (r + 0.01) * sin(glm::radians(rotFish))));
+        model = glm::rotate(model, glm::radians(rotFishLeft), glm::vec3(0.0f, 1.0f, 0.0f));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AcuarioPezTorso.Draw(lightingShader);
+
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
+        model = glm::translate(model, glm::vec3(91.512, 0, -75.644));
+        model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.01f));
+        model = glm::scale(model, glm::vec3(7.5, 7.5, 7.5));
+        model = glm::translate(model, glm::vec3(-1.2f + (r + 0.02) * cos(glm::radians(rotFish)), 0.487, -0.638 + (r + 0.02) * sin(glm::radians(rotFish))));
+        model = glm::rotate(model, glm::radians(rotAletas), glm::vec3(0.0f, 0.0f, 1.0f));
+        model = glm::rotate(model, glm::radians(rotFishLeft), glm::vec3(0.0f, 1.0f, 0.0f));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AcuarioPezAletaIzquierda.Draw(lightingShader);
+
+        model = glm::mat4(1);
+        model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
+        model = glm::translate(model, glm::vec3(91.512, 0, -75.644));
+        model = glm::translate(model, glm::vec3(0.0f, 0.0f, 0.01f));
+        model = glm::scale(model, glm::vec3(7.5, 7.5, 7.5));
+        model = glm::translate(model, glm::vec3(-1.2f + (r - 0.01) * cos(glm::radians(rotFish)), 0.487, -0.638 + (r - 0.01) * sin(glm::radians(rotFish))));
+        model = glm::rotate(model, glm::radians(-rotAletas), glm::vec3(0.0f, 0.0f, 1.0f));
+        model = glm::rotate(model, glm::radians(rotFishLeft), glm::vec3(0.0f, 1.0f, 0.0f));
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
+        AcuarioPezAletaDerecha.Draw(lightingShader);
 
         model = glm::mat4(1);
         model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
@@ -1593,7 +1639,7 @@ int main() {
 /*----------------------------------------------------------------------------------------------*/
         //Elefantes
         model = glm::mat4(1);
-       
+
         model = glm::scale(model, glm::vec3(0.3, 0.3, 0.3));
         model = glm::translate(model, glm::vec3(-86.83, 0, 43.758));
         model = glm::rotate(model, glm::radians(180.0f), glm::vec3(0, 1, 0));
@@ -1605,7 +1651,7 @@ int main() {
         model = glm::rotate(model, glm::radians(-trompaRot[0]), glm::vec3(1, 0, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         Trompa1.Draw(lightingShader);
-     
+
         model = glm::translate(model, glm::vec3(-0.0912, -1.2701, 0.1117));
         model = glm::rotate(model, glm::radians(-trompaRot[1]), glm::vec3(1, 0, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -1616,7 +1662,7 @@ int main() {
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         Trompa3.Draw(lightingShader);
 
-        model = glm::translate(model, glm::vec3(0.0547,-0.9527,-0.0731));
+        model = glm::translate(model, glm::vec3(0.0547, -0.9527, -0.0731));
         model = glm::rotate(model, glm::radians(-trompaRot[3]), glm::vec3(1, 0, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         Trompa4.Draw(lightingShader);
@@ -1625,7 +1671,7 @@ int main() {
         model = glm::rotate(model, glm::radians(-trompaRot[4]), glm::vec3(1, 0, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         Trompa5.Draw(lightingShader);
- 
+
         model = glm::translate(model, glm::vec3(0.0365, -0.6839, 0.007));
         model = glm::rotate(model, glm::radians(-trompaRot[5]), glm::vec3(1, 0, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -1635,7 +1681,7 @@ int main() {
         model = glm::rotate(model, glm::radians(-trompaRot[6]), glm::vec3(1, 0, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
         Trompa7.Draw(lightingShader);
- 
+
         model = glm::translate(model, glm::vec3(0.1423, -0.5732, -0.0129));
         model = glm::rotate(model, glm::radians(-trompaRot[7]), glm::vec3(1, 0, 0));
         glUniformMatrix4fv(modelLoc, 1, GL_FALSE, glm::value_ptr(model));
@@ -1718,9 +1764,9 @@ int main() {
             Arbol.Draw(lightingShader);
         }
         glUniform1i(glGetUniformLocation(lightingShader.Program, "activaTransparencia"), 0);
-     
+
         glBindVertexArray(0);
-        
+
         // Also draw the lamp object, again binding the appropriate shader
         lampShader.Use();
         // Get location objects for the matrices on the lamp shader (these could be different on a different shader)
@@ -2151,27 +2197,15 @@ void DoMovement() {
 
     animElef();
 
-    if (keys[GLFW_KEY_B]) {
-        animateBubbles();
-    }
-
-    if (keys[GLFW_KEY_M]) {
+    if (animFishRotating) {
+        moveFins();
         animateFish();
     }
 
-    if (keys[GLFW_KEY_P]) {
-        animateDoors();
-    }
-
-    if (keys[GLFW_KEY_N]) {
-        animateChair();
-    }
-
-    if (keys[GLFW_KEY_X]) {
-        animateSillas();
-    }
-
-
+    if (animBubbles) animateBubbles();
+    if (animDoors) animateDoors();
+    if (animChair) animateChair();
+    if (animChairs) animateSillas();
 
     if (cajaAbierta) {
         if (aperturaCajaZ < 2.299) {
@@ -2334,6 +2368,26 @@ void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mode
         else {
             lights = { glm::vec3(0) };
         }
+    }
+
+    if (keys[GLFW_KEY_B]) {
+        animBubbles = !animBubbles;
+    }
+
+    if (keys[GLFW_KEY_M]) {
+        animFishRotating = !animFishRotating;
+    }
+
+    if (keys[GLFW_KEY_P]) {
+        animDoorsAcuario = !animDoorsAcuario;
+    }
+
+    if (keys[GLFW_KEY_N]) {
+        animChair = !animChair;
+    }
+
+    if (keys[GLFW_KEY_X]) {
+        animChairs = !animChairs;
     }
 
     if (keys[GLFW_KEY_H]) {
